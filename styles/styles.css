@@ -1,0 +1,459 @@
+/*GENERAL ========================*/
+:root {
+  --crvena: #f72249;
+  --target: #0e184085;
+  --tamno-teget: rgba(6, 12, 14, 0.8);
+  --teget: #0e1840;
+  --pozadina-selekcija: #f7f7fd;
+  --footer: #030919;
+  --copyright: #101522;
+  --crvena-tamno: #d41e3f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 3000px;
+}
+h2 {
+  color: var(--teget);
+}
+.section-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.section-title h2 {
+  text-transform: uppercase;
+}
+.section-title p {
+  color: gray;
+}
+.custom-hr {
+  width: 60px;
+  height: 4px;
+  background-color: var(--crvena);
+}
+a {
+  transition: all 0.3s;
+}
+a:hover {
+  transition: all 0.3s;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 0.3rem;
+  background-color: var(--crvena);
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-to-top:hover {
+  text-decoration: none;
+  background-color: var(--crvena-tamno);
+}
+/*=================================*/
+
+/*NAVBAR =========================*/
+
+.cta-btn {
+  background-color: var(--crvena);
+  border-radius: 100px;
+  color: #fff !important;
+  padding-left: 0.5rem 1.5rem !important;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+.cta-btn:hover {
+  background-color: var(--crvena-tamno);
+}
+.nav-bg {
+  background: var(--target);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.main-logo {
+  height: 30px;
+  width: auto;
+}
+.nav-bg .active {
+  border-bottom: 2px solid var(--crvena);
+}
+/*HERO SECTION====================*/
+
+.hero-section {
+  background-image: url("../img/intro-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-dark {
+  width: 100%;
+  height: 100%;
+  background-color: var(--tamno-teget);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.hero-content {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section h1 {
+  text-align: center;
+}
+.hero-section span {
+  color: var(--crvena);
+}
+.hero-section p {
+  text-align: center;
+}
+.modal-btn {
+  background-color: var(--crvena);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+.modal-btn i {
+  color: #fff;
+}
+
+.border-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.527);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.outline-btn {
+  color: #fff;
+  border: 2px solid var(--crvena);
+  width: fit-content;
+  padding: 0.3rem 1.6rem;
+  border-radius: 100px;
+}
+.outline-btn:hover {
+  text-decoration: none;
+  background-color: var(--crvena);
+  color: white;
+}
+.modal-btn:hover {
+  background-color: var(--crvena-tamno);
+}
+
+/*ABOUT EVENT SECTION ==========*/
+
+.about-event-section {
+  background-image: url("../img/about-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  padding: 3rem 0rem;
+  background-attachment: fixed;
+}
+.about-event-section h2 {
+  color: #fff;
+}
+.about-event-section p {
+  margin-bottom: 0px;
+}
+.about-dark {
+  width: 100%;
+  height: 100%;
+  background-color: var(--tamno-teget);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*EVENT SPEAKERS SECTION ========================*/
+.event-speakers-section {
+  margin: 3.5rem 0px;
+}
+.event-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 220px;
+  width: 100%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.event-card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(6, 12, 34, 0.76);
+  padding: 0.9rem;
+  position: absolute;
+  bottom: -43px;
+  left: 0%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.event-card:hover .event-card-title {
+  bottom: 0px;
+  transition: all 0.4s;
+}
+.event-card-title a {
+  color: #fff;
+}
+.event-card-title a:hover {
+  color: var(--crvena);
+  text-decoration: none;
+}
+.event-card-title h6 {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+.event-card-title i {
+  font-size: 0.8rem;
+  margin: 0px 0.15rem;
+}
+/*EVENT SECTION ==========================*/
+.event-section {
+  background-color: var(--pozadina-selekcija);
+  padding: 3.5rem 0px;
+}
+.event-section .list-group-item {
+  background-color: transparent;
+}
+.event-section .nav-link {
+  border-radius: 100px;
+  padding: 0.4rem 5rem;
+  background-color: var(--teget);
+  color: #fff;
+  margin: 0px 0.4rem;
+  transition: all 0.4s;
+}
+.event-section .nav-link:hover {
+  background-color: #15225f;
+  transition: all 0.4s;
+}
+.event-section i {
+  color: gray;
+}
+.event-section .nav-link.active {
+  background-color: var(--crvena);
+}
+.event-item {
+  margin-top: 2rem;
+}
+.event-item .event-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin-right: 0.4rem;
+  margin-left: 1.5rem;
+}
+.event-item .list-group-item {
+  display: flex;
+  align-items: center;
+  transition: all 0.4s;
+  padding: 1.1rem 0.6px;
+}
+.event-item .list-group-item:hover {
+  background-color: #fff;
+  transition: all 0.4s;
+}
+.event-item h6 {
+  margin-bottom: 0.1rem;
+}
+.event-item h6 > i {
+  color: rgb(118, 118, 223);
+  font-weight: 400;
+}
+.event-item i {
+  font-size: 0.9rem;
+}
+
+/*EVENT GALLERY ===============================*/
+.event-gallery {
+  padding: 3.5rem 0px;
+}
+.gallery-top-img {
+  background-image: url("../img/venue-info.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-darken {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(13, 20, 40, 0.8);
+  z-index: 0;
+}
+.gallery-small-img {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 190px;
+  transition: all 0.4s;
+}
+.gallery-small-img:hover {
+  background-size: 120%;
+  transition: all 0.4s;
+}
+.event-gallery [class^="col-"] {
+  padding: 2px;
+}
+
+/*HOTEL SECTION ==============================*/
+.gallery-section {
+  padding: 3.5rem 0px;
+}
+.hotel-section {
+  background-color: var(--pozadina-selekcija);
+  padding: 3.5rem 0px;
+}
+.hotel-img {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  transition: all 0.4s;
+}
+
+.hotel-card-body section i {
+  color: rgb(255, 208, 0);
+}
+.hotel-card {
+  background-color: #fff;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #fefefe;
+}
+.hotel-card:hover .hotel-img {
+  background-size: 120%;
+  transition: all 0.4s;
+}
+.hotel-card-body {
+  padding: 1rem;
+}
+/*GALLERY SECTION========================*/
+.gallery-section .nav-link {
+  color: var(--tamno-teget);
+}
+.gallery-section li {
+  text-transform: uppercase;
+}
+.gallery-section .nav-link.active {
+  background: transparent;
+  color: var(--crvena);
+  font-weight: 500;
+}
+.gallery-img {
+  height: 220px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+.gallery-img .img-hover {
+  width: 100%;
+  background-color: rgba(13, 20, 40, 0.8);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: -100px;
+  transition: all 2s;
+}
+.gallery-img:hover .img-hover {
+  top: 0px;
+  transition: all 0.4s;
+}
+.gallery-img .img-hover h6,
+p {
+  margin: 0;
+}
+.gallery-img .img-hover p {
+  font-size: 0.8rem;
+}
+.gallery-img .img-hover a {
+  color: #fff;
+}
+.gallery-img .img-hover a:hover {
+  color: var(--crvena);
+  text-decoration: none;
+}
+
+/*SPONSORS ==============================*/
+.sponsors-section {
+  padding: 3.5rem 0px;
+  background-color: var(--pozadina-selekcija);
+}
+.support-logo {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 1rem;
+}
+.support-logo img {
+  transition: all 0.4s;
+}
+.support-logo:hover img {
+  transform: scale(1.2);
+  transition: all 0.4s;
+}
+.sponsors-section .row-border {
+  border: 1px solid #ebebeb;
+  border-left: 1px solid #ebebeb;
+  background-color: #fff;
+}
